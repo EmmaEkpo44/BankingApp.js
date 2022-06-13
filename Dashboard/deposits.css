@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.welcome {
+    margin-left: 500px;
+    font-weight: 800;
+    color: orangered;
+    font-size: 40px;
+    transform: translateY(-150px);
+}
+
+#sideNav {
+    height: 590px;
+    width: 29%;
+    margin-left: -100px;
+    color: orangered;
+    background: linear-gradient(rgb(17, 17, 65), black);
+    margin-top: -10px;
+    padding: 50px;
+    animation-name: showThem;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal;
+   
+}
+
+@keyframes showThem {
+    from {
+        transform: translateX(-500px);
+    }
+}
+
+input{
+    outline: 0;
+    border-bottom: 1px solid black;
+}
+#dashBox {
+    height: 670px;
+    margin-top: -670px;
+    margin-left: 438px;
+    padding-left: 170px;
+}
+
+#box {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#box:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#bD:hover {
+    background-color: orangered;
+    border-radius: 0px 20px 20px 0px;
+    transform: scale(1.1);
+}
+
+.card:hover {
+    background-color: rgb(243, 239, 239);
+    color:rgb(255, 91, 31);
+    transform: scale(1.1);
+}
+
+#dashboard {
+    height: 200px;
+    border: 1px solid red;
+    margin-top: -620px;
+    margin-left: 310px;
+    padding: 50px;
+}

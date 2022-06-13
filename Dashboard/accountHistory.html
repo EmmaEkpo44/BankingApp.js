@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./accountHistory.css">
+</head>
+
+<body onload="showAccNumber()">
+
+    <div class="Sidenav shadow-lg" id="sideNav">
+        <div style="margin-left: 51px;transform: translateY(-40px);padding: 35px;height: 30px;border: 5px solid rgb(224, 66, 8);width: 265px;">
+            <div style="border: 3px solid rgb(224, 66, 8);height: 40px;width: 40px;margin-top: -20px;padding: 20px;margin-left: -30px;border-radius: 100%;">
+                <img src="/images/avataricon-removebg-preview.png" alt="Avatar" class="avatar" style="height:30px;margin-top: -30px;margin-left: -13px;">
+                <p style="margin-top: -35px;margin-left: 37px;font-size: 12px;font-weight: 700;">AccountNumber:
+                    <p style="transform: translateY(-33px);margin-left: 140px;font-weight: 500;color:white;font-size: 12px;" id="accNumberDispTrans"></p>
+                </p>
+            </div>
+        </div>
+
+        <div style="width: 111.3%;margin-left: 20px;transform: translateY(-25px);height: 400px;">
+            <a href="./Dashboard.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px);" id="bD">
+                    <img src="/images/icons8-dashboard-layout-24.png" alt="" style="transform: translateX(15px);margin-top: -7px;">
+                    <span style="margin-left:50px;">DashBoard</span>
+                </div>
+            </a>
+            <a href="./transfer.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px);" id="bD">
+                    <img src="/images/icons8-money-transfer-26.png" alt="" style="transform: translateX(15px);margin-top: -7px;">
+                    <span style="margin-left:50px;">Transfers</span>
+                </div>
+            </a>
+            <a href="./airtimetop-up2.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="aq">
+                    <img src="/images/icons8-topup-payment-50.png" alt="" style="transform: translateX(10px);margin-top: -7px;height: 30px;">
+                    <span style="margin-left:30px; ">Airtime/Data Topup</span>
+                </div>
+            </a>
+            <a href="./accountHistory.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="qW">
+                    <img src="/images/icons8-order-history-64.png" alt="" style="transform: translateX(15px);margin-top: -7px;height: 35px;">
+                    <span style="margin-left:40px;">Account-History</span>
+                </div>
+            </a>
+            <a href="./deposits.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="bD">
+                    <img src="/images/icons8-mts-money-50.png" alt="" style="transform: translateX(15px);margin-top: -7px;height: 40px;">
+                    <span style="margin-left:38px;">Deposits</span>
+                </div>
+            </a>
+
+            <a onclick="logUserOut()" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="bD">
+                    <img src="/images/icons8-logout-rounded-down-50.png" alt="" style="transform: translateX(10px);margin-top: -7px;height: 30px;">
+                    <span style="margin-left: 50px;">Log-Out</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div style="height: 580px;width: 78.9%;margin-top: -580px;transform: translateX(266px);padding: 50px;background-color:whitesmoke;display:block;" id="mainDisplay">
+        <img src="/images/Emma's bank Logo.png" alt="" height="40px" style="margin-top: -30px;transform: translateX(800px);">
+        <p style="margin-top: -60px;font-size: 25px;font-weight: 700;color: rgb(224, 66, 8);">Account History</p>
+        <p style="font-style: oblique;font-weight: 100;transform: translateY(-10px);">Manage your account and Finance, view charts on your monthly & annual expenditures.</p>
+        <div style="display: flex;margin-top: 60px;margin-left: 20px;">
+            <a style="text-decoration: none;color:rgb(224, 66, 8) ;">
+                <div class="card p-5 shadow-lg" style="width:150px;height: 150px;cursor: pointer;border: 0px solid;margin-left: -20px;" id="air-a">
+                    <img src="/images/bank-statement-icon.jpg" alt="" height="100px">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(5px);font-weight: 600;">Account Statement</p>
+                </div>
+            </a>
+            <a style="text-decoration: none;color:rgb(224, 66, 8) ;cursor: pointer" id="air-a">
+                <div class="card p-5 shadow-lg" style="width:150px;height: 150px;margin-left: 10px;border: 0px solid;">
+                    <img src="/images/transaction-history-icon.jpg" alt="" height="100px">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(0px);font-weight: 600;">View Transaction History</p>
+                </div>
+            </a>
+            <a style="text-decoration: none;color:rgb(224, 66, 8) ;cursor: pointer " id="air-a">
+                <div class="card p-5 shadow-lg" style="width:150px;height: 150px;margin-left: 10px;border: 0px solid;" onclick="showUprade()">
+                    <img src="/images/upgrade-icon.png" alt="" style="height: 100px;transform: translateY(-10px);">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(0px);font-weight: 600;">Update & Upgrade Account</p>
+                </div>
+            </a>
+        </div>
+        <div style="height: 350px;width: 33%;transform: translateY(-150px);margin-left: 600px;padding: 20px;border-radius: 5px;" class="shadow-lg">
+            <p style="margin-left: 60px;font-style: oblique;font-size: 20px">Account Officer</p>
+            <hr>
+            <div style="height: 85px;width:85px;border-radius: 100%;margin-left: 85px;" class="shadow-lg">
+                <img src="/images/my picture.jpg" alt="" style="height: 70px;margin-top: 7px;margin-left: 8px;border-radius: 100%;width: 70px;border: 2px solid rgb(6, 156, 156);">
+            </div>
+            <p style="margin-top: 20px;margin-left: 40px;font-weight: 500;font-size: 22px">Emmanuel Richard</p>
+            <p style="font-style: oblique;margin-top: -15px;margin-left: 65px;font-family: Georgia, 'Times New Roman', Times, serif;font-size: small;">SCICT,Ogbomoso branch</p>
+            <hr>
+            <img src="/images/email-cash-transfer.webp" alt="gmail-icon" style="height: 40px;cursor:pointer;margin-left: 120px;transform: translateY(-15px);">
+            <p style="font-style: oblique;margin-top:-15px;margin-left: 100px;font-family: Georgia, 'Times New Roman', Times, serif;">Send Mail</p>
+           
+        </div>
+    </div>
+    <div style="margin-top: -580px;transform: translateX(266px);padding: 50px;height:580px;display:none; background-color: whitesmoke;display: none; width: 78.9%;" class="shadow" id="otherBanksTransCompohis">
+        <img src="/images/Emma's bank Logo.png " alt=" " height="40px " style="margin-top: 20px;transform: translateX(800px); ">
+        <p style="font-weight: 700;font-size:30px;transform: translateY(-80px);color:rgb(224, 66, 8) ;">Own Account</p>
+        <p style="transform: translateY(-90px);margin-left: 5px;font-weight:100;font-style: oblique;">Send money to anyone.It's easy and quick.</p>
+        <div onclick="cancelSection()" style="height: 30px;padding: 30px;display: flex;margin-top: -40px;cursor: pointer;;transform: translateY(-60px);background-color:rgb(224, 66, 8);;width: 160px;border-color: rgb(224, 66, 8) ;border: 1px solid rgb(224, 66, 8) ;">
+            <img src="/images/icons8-dashboard-layout-24.png" alt="" height="30px" style="transform: translateY(-10px);margin-left: -20px;">
+            <p style="transform: translateY(-10px);margin-left: 8px;font-size: 18px;font-weight: 600;color: white;">Menu List</p>
+        </div>
+        <div style="width: 55%;height: 400px;background-color: white;margin-top: -75px;" class="shadow-lg">
+            <p style="transform: translateY(60px);margin-left: 200px;color: red;" id="warning-msg"></p>
+            <input type="number" style="transform: translateY(40px);margin-left: 50px; " class="form-control w-75 p-4 " placeholder="Account to debit ">
+            <input type="number" style="transform: translateY(60px);margin-left: 50px; " class="form-control w-75 p-4 " placeholder="Account to Credit ">
+            <p style="transform: translateY(70px);margin-left: 50px;font-weight: 600;">Amount to transfer :</p>
+            <input type="number" style="transform: translateY(60px);margin-left: 50px ; " class="form-control w-75 p-4 " placeholder="Enter Amount 0.00 ">
+            <input type="text" style="transform: translateY(80px);margin-left: 50px; " class="form-control w-75 p-4 " placeholder="Remarks ">
+            <button class="btn btn-outline-danger" style="width:100px;transform: translateY(100px);margin-left: 350px;" onclick="cancelTransaction()" id="okBtn">Ok</button>
+        </div>
+
+    </div>
+</body>
+<script>
+    function cancelSection() {
+        
+        window.location.reload()
+        mainDisplay.style.display = "block"
+        
+    }
+    var us = JSON.parse(localStorage.getItem('richard'));
+
+    function showAccNumber() {
+        document.getElementById('accNumberDispTrans').innerText = ("********* ");
+        qW.style.backgroundColor = "orangered"
+    }
+
+    function showUprade() {
+        // trans.style.display = "none"
+        mainDisplay.style.display = "none"
+        otherBanksTransCompohis.style.display = "block"
+            // confrmTrans.style.display = "none"
+    }
+
+   
+    function cancelTransactionConfirm() {
+        alert("This feature is not avialable at the moment.")
+        mainDisplay.style.display = "block"
+        otherBanksTransCompohis.style.display = "none"
+        confirmTrans.style.display = "none"
+    }
+</script>
+
+</html>
+<script src="./Dashboard.js "></script>

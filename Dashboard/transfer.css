@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.welcome {
+    margin-left: 500px;
+    font-weight: 800;
+    color: orangered;
+    font-size: 40px;
+    transform: translateY(-150px);
+}
+
+#sideNav {
+    height: 590px;
+    width: 29%;
+    margin-left: -100px;
+    color: orangered;
+    background: linear-gradient(rgb(19, 19, 69), black);
+    margin-top: -10px;
+    padding: 50px;
+    animation-name: showThem;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+@keyframes showThem {
+    from {
+        transform: translateX(-500px);
+    }
+}
+
+#dashBox {
+    height: 670px;
+    margin-top: -670px;
+    margin-left: 438px;
+    padding-left: 170px;
+}
+
+#box {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#box:hover {
+    color: white;
+    text-decoration: none;
+    
+}
+
+#bD:hover {
+    background-color: orangered;
+    border-radius: 0px 20px 20px 0px;
+    transform: scale(1.1);
+}
+
+#dashboard {
+    height: 200px;
+    border: 1px solid red;
+    margin-top: -620px;
+    margin-left: 310px;
+    padding: 50px;
+}
+
+#ab {
+    color: black;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+#ab:active {
+    font-weight: 700;
+    color: rgb(224, 66, 8);
+    text-decoration: underline;
+}
+.card{
+    width:150px;
+    height: 150px;
+}
+.card:hover {
+    background-color: rgb(243, 239, 239);
+    color:rgb(255, 91, 31);
+    transform: scale(1.1);
+}
+
+#orange {
+    width: 34%;
+    height:250px;
+    transform: translateY(-520px);
+    margin-left: 640px;
+    padding: 50px;
+    background-color: white;
+}

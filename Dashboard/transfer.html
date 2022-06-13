@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./transfer.css">
+</head>
+
+<body onload="showAccNumber()" id="dontallowtabbtn" style="overflow-y:hidden;">
+
+    <div class="Sidenav shadow-lg" id="sideNav">
+        <div style="margin-left: 51px;transform: translateY(-40px);padding: 35px;height: 30px;border: 5px solid rgb(224, 66, 8);width: 265px;">
+            <div style="border: 3px solid rgb(224, 66, 8);height: 40px;width: 40px;margin-top: -20px;padding: 20px;margin-left: -30px;border-radius: 100%;">
+                <img src="/images/avataricon-removebg-preview.png" alt="Avatar" class="avatar" style="height:30px;margin-top: -30px;margin-left: -13px;">
+                <p style="margin-top: -35px;margin-left: 37px;font-size: 12px;font-weight: 700;">AccountNumber:
+                    <p style="transform: translateY(-33px);margin-left: 140px;font-weight: 500;color:white;font-size: 12px;" id="accNumberDisp"></p>
+                </p>
+            </div>
+        </div>
+
+        <div style="width: 111.3%;margin-left: 20px;transform: translateY(-25px);height: 400px;">
+            <a href="./Dashboard.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px);" id="bD">
+                    <img src="/images/icons8-dashboard-layout-24.png" alt="" style="transform: translateX(15px);margin-top: -7px;">
+                    <span style="margin-left:50px;">DashBoard</span>
+                </div>
+            </a>
+            <a href="./transfer.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px);" id="aC">
+                    <img src="/images/icons8-money-transfer-26.png" alt="" style="transform: translateX(15px);margin-top: -7px;">
+                    <span style="margin-left:50px;">Transfers</span>
+                </div>
+            </a>
+            <a href="./airtimetop-up2.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="bD">
+                    <img src="/images/icons8-topup-payment-50.png" alt="" style="transform: translateX(10px);margin-top: -7px;height: 30px;">
+                    <span style="margin-left:30px; ">Airtime/Data Topup</span>
+                </div>
+            </a>
+            <a href="./accountHistory.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="bD">
+                    <img src="/images/icons8-order-history-64.png" alt="" style="transform: translateX(15px);margin-top: -7px;height: 35px;">
+                    <span style="margin-left:40px;">Account-History</span>
+                </div>
+            </a>
+            <a href="./deposits.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="bD">
+                    <img src="/images/icons8-mts-money-50.png" alt="" style="transform: translateX(15px);margin-top: -7px;height: 40px;">
+                    <span style="margin-left:38px;">Deposits</span>
+                </div>
+            </a>
+
+            <a onclick="logUserOut()" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); cursor: pointer;" id="bD">
+                    <img src="/images/icons8-logout-rounded-down-50.png" alt="" style="transform: translateX(10px);margin-top: -7px;height: 30px;">
+                    <span style="margin-left: 50px;">Log-Out</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div style="height: 590px; width: 78.9%;margin-top: -590px;transform: translateX(266px);padding: 50px;background-color:whitesmoke;background-blend-mode: screen;display:block;" id="wholeDisplay">
+        <img src="/images/Emma's bank Logo.png " alt=" " height="40px " style="margin-top: -30px;transform: translateX(850px); ">
+        <p style="font-size:30px;font-weight: 700;color: rgb(224, 66, 8);transform: translateY(-50px); ">Transfers</p>
+        <p style="font-weight: 100;font-style: oblique;transform: translateY(-65px); ">Transfer money between Your accounts or other accounts.</p>
+        <div class="container d-flex " style="margin-left:-25px;padding: 30px;width: 66%;height: 450px;flex-wrap: wrap;transform: translateY(-60px);">
+            <a style="text-decoration: none;color:rgb(224, 66, 8) ; ">
+                <div class="card p-5" style="cursor: pointer;border: 0px solid ; " onclick="goToRbank() " id="a1">
+                    <img src="/images/download (1).png " alt=" " height="100px ">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(5px);font-weight: 500; ">Transfer To R&B Banks</p>
+                </div>
+            </a>
+
+            <a style="text-decoration: none; color:rgb(224, 66, 8) ">
+                <div class="card p-5 " style="margin-left:20px;cursor: pointer;border: 0px solid ; " onclick="otherBanksTrans() " id="a2">
+                    <img src="/images/download (2).png " alt=" " height="100px ">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(0px);font-weight: 500; ">Transfer To Other Banks</p>
+                </div>
+            </a>
+
+            <a style="text-decoration: none; color:rgb(224, 66, 8) ">
+                <div class="card p-5 " style="margin-left: 20px;cursor: pointer;border: 0px solid ; " onclick="otherBanksTrans() " id="a3">
+                    <img src="/images/plane-money-transfer-icon.jpg " alt=" " height="100px ">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(0px);font-weight: 500; ">Transfer To Own Account</p>
+                </div>
+            </a>
+
+            <a style="text-decoration: none; color:rgb(224, 66, 8) ">
+                <div class="card p-5 " style="margin-left: 0px;margin-top: 10px;cursor: pointer;border: 0px solid ; " onclick="otherBanksTrans()" id="a4">
+                    <img src="/images/plane-money-transfer-icon.jpg " alt=" " height="100px ">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(0px);font-weight: 500; ">Transfer Via Email & Phone Number</p>
+                </div>
+            </a>
+
+            <a style="text-decoration: none;color:rgb(224, 66, 8) ">
+                <div class="card p-5 " style="margin-top: 10px;margin-left:20px;cursor: pointer;border: 0px solid ; " onclick="otherBanksTrans()" id="a5">
+                    <img src="/images/e-naira-icon.png " alt=" " height="100px ">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(0px);font-weight: 500; ">E-Naira</p>
+                </div>
+            </a>
+        </div>
+        <div class="shadow-lg" id="orange">
+            <p style=" text-align: center;transform: translateY(-35px);font-size: 18px;font-style: oblique; ">Frequent Transfers</p>
+            <div style="height: 35px;padding: 10px;width: 305px;margin-left: -50px;transform: translateY(-40px);background-color: rgb(182, 181, 181); ">
+                <ul style="display: flex;list-style-type: none;transform: translateX(-100px); ">
+                    <a id="ab ">
+                        <li style="margin-left: 110px;margin-top: -5px;cursor: pointer; " onclick="showContentRb() ">R&B Bank</li>
+                        <div style="border: 1px solid red;height: 5px;width: 80px;transform: translateY(2px);margin-left:109px;background-color: red;display:none; " id="borderRb"></div>
+                    </a>
+                    <a id="ab ">
+                        <li style="transform: translateX(80px);margin-top: -5px;cursor: pointer; " onclick="showContentOther() ">Other Banks</li>
+                        <div style="border: 1px solid red;height: 5px;width: 93px;transform: translateX(80px);background-color: red;display:none; " id="borderOb"></div>
+                    </a>
+                </ul>
+            </div>
+            <p style="display:none;transform: translateY(20px);font-size: small;" id="rR">No recents transfers to R&B bank.</p>
+            <p style="display:none;transform: translateY(25px);margin-left: -15px;font-size: small;" id="tO">No recents transfers to Other banks.</p>
+        </div>
+        <a href=" ">
+            <div style="height: 40px;width: 40px;margin-top: -450px;padding: 30px;border-radius: 100%;background-color: rgb(232, 83, 29);transform: translateX(850px); ">
+                <img src="/images/icons8-chat-message-sent-50.png " alt=" " style="transform:translateY(-12px);margin-left:-15px; height: 30px;">
+            </div>
+        </a> 
+    </div>
+    <div style="height: 580px;width: 600px;margin-top: -580px;transform: translateX(265px);display:none;background-color: white;" class="shadow-lg" id="trans">
+        <img src="/images/Emma's bank Logo.png " alt=" " height="50px " style="margin-top: 25px;transform: translateX(800px); ">
+        <p style="margin-top: -30px;margin-left: 50px;transform: translateY(-40px);font-weight: 700;" class="text-danger" id="textWarning"></p>
+        <p style="transform: translateY(-55px);margin-left: 50px;color: rgb(27, 27, 27);font-size: 15px;font-style: oblique;font-weight: 600; ">Daily Transfer Limit: <span>$1000.00</span></p>
+        <p style="margin-top: -10px;margin-left: 70px;transform: translateY(-55px);font-size: small;">Select beneficairy option </p>
+        <div style="height:35px;padding: 20px;width: 500px;margin-left:50px;box-shadow: 0px 0px 5px 0px;transform: translateY(-55px); ">
+            <img src="/images/icons8-name-30.png " alt=" " style="transform: translateY(-15px); ">
+            <img src="/images/icons8-name-30.png " alt=" " style="transform: translateY(-15px);margin-left: 135px; ">
+            <img src="/images/icons8-name-30.png " alt=" " style="transform: translateY(-15px);margin-left: 105px; ">
+            <p style=" transform:translateY(-43px);margin-left: 40px;cursor: pointer; " onclick="savedBorder() ">Saved</p>
+            <p style="margin-left:210px; transform: translateY(-83px);cursor: pointer; " onclick="newBorder() ">New</p>
+            <p style="margin-left:350px;transform: translateY(-123px);cursor: pointer; " onclick="preBorder() ">Pre-registered</p>
+            <div style="border: 1px solid red;height: 5px;width: 85px;transform: translateY(-135px);margin-left:170px;background-color: red;display:none; " id="borderNew"></div>
+            <div style="border: 1px solid red;height: 5px;width: 85px;transform: translateY(-135px);margin-left:5px;background-color: red;display:none; " id="borderSaved"></div>
+            <div style="border: 1px solid red;height: 5px;width: 140px;transform: translateY(-135px);margin-left:315px;background-color: red;display:none; " id="borderPre"></div>
+
+        </div>
+        <div style="margin-left: 20px;margin-top: -20px;padding: 30px;height: 200px;">
+            <input type="number" class="form-control w-75 p-4 " style="margin-left: -0px;transform: translateY(-50px);" placeholder="Enter Benficairy's Account Number" id="beneficairyAccNumber">
+            <p style="transform:translateY(-40px);margin-left: -0px;font-weight: 700">Account To Debit:</p>
+            <input type="number" class="form-control w-75 p-4 " style="margin-left: -0px;transform: translateY(-50px);" placeholder="Account To Debit" id="accountToDebit">
+           
+            <p style="transform:translateY(-40px);margin-left: -0px;font-weight: 700 ">Amount To Transfer:</p>
+            <input type="number" class="form-control w-75 p-4 " placeholder="Enter Amount " style="margin-left: 0px;margin-top: -50px; " id="amountTransfer">
+            <textarea placeholder="Remarks " style="margin-left: -0px;margin-top: 15px;" class="p-3 w-75" id="remarksBox"></textarea>
+            <p style="margin-top:30px;font-weight: 700;margin-left: -0px ">You would not be charged for this transaction.</p>
+            <button class="btn btn-outline-danger p-2 " style="width:100px;transform: translateY(-520px);margin-left: 400px; " onclick="cancelTransaction23()" id="cancelBtn">Cancel</button>
+            <span id="disp"><button id="continueBtn" style="margin-left: 390px;transform: translateY(-70px);width: 100px; " class="btn btn-outline-info p-2 ">continue</button></span>
+        </div>
+       
+        <a href=" ">
+            <div style="height: 40px;width: 40px;margin-top: 100px;padding: 30px;border-radius: 100%;background-color: rgb(232, 83, 29);transform: translateX(820px); ">
+                <img src="/images/icons8-chat-message-sent-50.png " alt=" " style="transform:translateY(-12px);margin-left:-15px; height: 30px;">
+            </div>
+        </a> 
+    </div>
+    </div>
+    <div style="margin-top: -600px;width:550px;padding: 50px;height: 530px;display:none;transform: translateX(270px);background-color: white;" class="shadow-lg " id="confrmTrans">
+        <p style="font-weight: 700;" class="">Confirm Your Transaction.</p>
+        <img src="/images/Emma's bank Logo.png " alt=" " height="50px " style="margin-top: -80px;transform: translateX(400px); ">
+        <p id="recieversName" class="text-primary" style="font-weight:600"></p>
+        <p id="sendersPurpose" class="text-danger" style="font-weight:600"></p>
+        <p style="font-weight: 700;transform: translateY(30px);margin-left: 5px;">Enter Your Account Number</p>
+        <input type="number" class="form-control w-75 p-4" style="transform: translateY(20px);border-top: 0px;" id="sendersAcctNumber">
+        <p style="font-weight: 700;transform: translateY(50px);">Enter Your Password</p>
+        <input type="password" class="form-control w-75  p-4" style="transform: translateY(40px);border-top: 0px;" id="sendersPassWord">
+        <button class="btn btn-outline-danger p-2 " style="width:100px;transform: translateY(100px);margin-left: 270px; " onclick="cancelTransaction23()">Cancel</button>
+        <span id="mighty"><button onmouseover="checkInput()" class="btn btn-success p-2 " style="width: 100px;transform: translateY(58px);margin-left: 0px; " id="great">Done</button></span>
+    </div>
+    <div style="margin-top: -630px;transform: translateX(266px);padding: 50px;height:728px;display:none; background-color: whitesmoke;display: none; width: 78.9%;" class="shadow" id="otherBanksTransCompo">
+        <img src="/images/Emma's bank Logo.png " alt=" " height="40px " style="margin-top: 20px;transform: translateX(800px); ">
+        <p style="font-weight: 700;font-size:30px;transform: translateY(-20px);color:rgb(224, 66, 8) ;">Own Account</p>
+        <p style="transform: translateY(-30px);margin-left: 5px;font-weight:100;font-style: oblique;">Send money to anyone.It's easy and quick.</p>
+        <div onclick="cancelSection()" style="height: 30px;padding: 30px;display: flex;margin-top: -40px;cursor: pointer;;transform: translateY(10px);background-color:rgb(224, 66, 8);;width: 160px;border-color: rgb(224, 66, 8) ;border: 1px solid rgb(224, 66, 8) ;">
+            <img src="/images/icons8-dashboard-layout-24.png" alt="" height="30px" style="transform: translateY(-10px);margin-left: -20px;">
+            <p style="transform: translateY(-10px);margin-left: 8px;font-size: 18px;font-weight: 600;color: white;">Menu List</p>
+        </div>
+        <div style="width: 55%;height: 400px;background-color: white;margin-top: 10px;" class="shadow-lg">
+            <p style="transform: translateY(60px);margin-left: 200px;color: red;" id="warning-msg"></p>
+            <input type="number" style="transform: translateY(40px);margin-left: 50px; " class="form-control w-75 p-4 " placeholder="Account to debit ">
+            <input type="number" style="transform: translateY(60px);margin-left: 50px; " class="form-control w-75 p-4 " placeholder="Account to Credit ">
+            <p style="transform: translateY(70px);margin-left: 50px;font-weight: 600;">Amount to transfer :</p>
+            <input type="number" style="transform: translateY(60px);margin-left: 50px ; " class="form-control w-75 p-4 " placeholder="Enter Amount 0.00 ">
+            <input type="text" style="transform: translateY(80px);margin-left: 50px; " class="form-control w-75 p-4 " placeholder="Remarks ">
+            <button class="btn btn-outline-danger" style="width:100px;transform: translateY(90px);margin-left: 350px;" onclick="cancelTransaction()" id="okBtn">Ok</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    function cancelSection() {
+        
+        window.location.reload()
+        wholeDisplay.style.display = "block"
+       
+    }
+    document.getElementById("dontallowtabbtn").addEventListener("keydown", (e) => {
+        if (e.key == "Tab") {
+            e.preventDefault();
+        }
+    })
+    var us = JSON.parse(localStorage.getItem('richard'));
+
+    function showAccNumber() {
+        document.getElementById('accNumberDisp').innerText = ("*********");
+        aC.style.backgroundColor = "orangered"
+        borderRb.style.display = "block"
+        borderOb.style.display = "none"
+        rR.style.display = "block"
+    }
+
+    function showContentRb() {
+        borderRb.style.display = "block"
+        borderOb.style.display = "none"
+        rR.style.display = "block"
+        tO.style.display = "none"
+    }
+
+    function showContentOther() {
+        borderOb.style.display = "block "
+        borderRb.style.display = "none "
+        rR.style.display = "none "
+        tO.style.display = "block "
+
+    }
+
+    function goToRbank() {
+        trans.style.display = "block "
+        wholeDisplay.style.display = "none "
+        borderR.style.display = "block "
+        borderO.style.display = "none "
+        pRb.style.display = "block "
+        pOb.style.display = "none "
+        borderSaved.style.display = "block "
+        borderNew.style.display = "none "
+        borderPre.style.display = "none "
+        dontallowtabbtn.style.backgroundColor = "whitesmoke"
+
+    }
+
+    function newBorder() {
+        borderNew.style.display = "block "
+        borderSaved.style.display = "none "
+        borderPre.style.display = "none "
+    }
+
+    function savedBorder() {
+        borderSaved.style.display = "block "
+        borderNew.style.display = "none "
+        borderPre.style.display = "none "
+    }
+
+    function preBorder() {
+        borderPre.style.display = "block"
+        borderSaved.style.display = "none"
+        borderNew.style.display = "none"
+    }
+
+    function showContentR() {
+
+        borderR.style.display = "block"
+        borderO.style.display = "none"
+        pRb.style.display = "block"
+        pOb.style.display = "none"
+    }
+
+    function showContentO() {
+        borderR.style.display = "none"
+        borderO.style.display = "block"
+        pOb.style.display = "block"
+        pRb.style.display = "none"
+    }
+
+    function cancelTransaction() {
+        trans.style.display = "none"
+        confrmTrans.style.display = "none"
+        otherBanksTransCompo.style.display = "none"
+        alert("This feature is not avialable at the moment.")
+        wholeDisplay.style.display = "block"
+    }
+
+    function cancelTransaction23() {
+       
+        trans.style.display = "none"
+        confrmTrans.style.display = "none"
+        wholeDisplay.style.display = "block"
+        window.location.reload()
+            
+    }
+
+    function otherBanksTrans() {
+        trans.style.display = "none"
+        wholeDisplay.style.display = "none"
+        otherBanksTransCompo.style.display = "block"
+        confrmTrans.style.display = "none"
+    }
+
+    function transConfirmation() {
+        trans.style.display = "none"
+        wholeDisplay.style.display = "none"
+        confrmTrans.style.display = "block"
+
+    }
+
+
+
+
+    var bAN = beneficairyAccNumber.value;
+    var aT = amountTransfer.value;
+    var aTD = accountToDebit.value;
+    var rB = remarksBox.value;
+    var sendAcN = sendersAcctNumber.value;
+    var sendPass = sendersPassWord.value;
+    document.getElementById("recieversName").innerHTML = "Adeola"
+    document.querySelector("#beneficairyAccNumber").addEventListener("click", () => {
+    document.getElementById("continueBtn").disabled = false;
+    continueBtn.style.backgroundColor=""
+    beneficairyAccNumber.style.borderColor = ""
+    amountTransfer.style.borderColor = ""
+    accountToDebit.style.borderColor = ""
+    remarksBox.style.borderColor = ""
+    document.getElementById("textWarning").innerText = ""
+    })
+    document.querySelector("#amountTransfer").addEventListener("click", () => {
+        document.getElementById("continueBtn").disabled = false;
+        continueBtn.style.backgroundColor=""
+        beneficairyAccNumber.style.borderColor = ""
+        amountTransfer.style.borderColor = ""
+        accountToDebit.style.borderColor = ""
+        remarksBox.style.borderColor = ""
+        document.getElementById("textWarning").innerText = ""
+    })
+    document.querySelector("#accountToDebit").addEventListener("click", () => {
+        document.getElementById("continueBtn").disabled = false;
+        continueBtn.style.backgroundColor=""
+        beneficairyAccNumber.style.borderColor = ""
+        amountTransfer.style.borderColor = ""
+        accountToDebit.style.borderColor = ""
+        remarksBox.style.borderColor = ""
+        document.getElementById("textWarning").innerText = ""
+    })
+    document.querySelector("#remarksBox").addEventListener("click", () => {
+        document.getElementById("continueBtn").disabled = false;
+        continueBtn.style.backgroundColor=""
+        beneficairyAccNumber.style.borderColor = ""
+        amountTransfer.style.borderColor = ""
+        accountToDebit.style.borderColor = ""
+        remarksBox.style.borderColor = ""
+        document.getElementById("textWarning").innerText = ""
+    });
+
+
+    var check = [];
+
+
+    document.getElementById("continueBtn").addEventListener("mouseover", function() {
+        check.splice(0, check.length)
+        var aT = amountTransfer.value;
+        var aTD = accountToDebit.value;
+        var rB = remarksBox.value;
+        var bAN = beneficairyAccNumber.value;
+        var star = JSON.parse(localStorage.getItem("richard"))
+        console.log(star)
+        var moon = JSON.parse(localStorage.getItem("allItems"))
+        var deduct = moon.find(we => (we.acctNumber === bAN))
+        var same = star[0].acctNumber
+        console.log(same);
+        check.push({
+            "amount": aT,
+            "accountNumber": bAN
+        });
+
+
+        if (bAN == "" || aT == "" || aTD == "" || rB == "") {
+            document.getElementById("continueBtn").disabled = true;
+            document.getElementById("continueBtn").style.backgroundColor = "red";
+            document.getElementById("textWarning").innerText = "Kindly fill-out the required field!."
+            beneficairyAccNumber.style.borderColor = "red"
+            amountTransfer.style.borderColor = "red"
+            accountToDebit.style.borderColor = "red"
+            remarksBox.style.borderColor = "red"
+
+        } else if (amountTransfer.value > 1000) {
+            document.getElementById("continueBtn").disabled = true;
+            document.getElementById("continueBtn").style.backgroundColor = "red";
+            document.getElementById("textWarning").innerText = "Bad Request :: This amount is beyond your daily limit!."
+            amountTransfer.style.borderColor = "red"
+        } else if (aTD !== star[0].acctNumber) {
+            accountToDebit.style.borderColor = "red"
+            document.getElementById("textWarning").innerText = "Sender's account number is wrong!"
+            document.getElementById("continueBtn").disabled = true;
+        } else if (amountTransfer.value >= star[0].userBalance) {
+            document.getElementById("textWarning").innerText = "Insufficient balance!."
+            amountTransfer.style.borderColor = "red"
+        } else if (deduct && star[0].userBalance > aT) {
+           
+
+            if (bAN == same) {
+                document.getElementById("continueBtn").disabled = true;
+                beneficairyAccNumber.style.borderColor = "red"
+                document.getElementById("textWarning").innerText = "Warning:: This Account Number Belongs To You"
+                   
+            } else {
+                document.getElementById("continueBtn").disabled = false;
+                document.getElementById("textWarning").innerText = " "
+                document.getElementById("recieversName").innerText = `${deduct.fullname} is the reciever!.`
+                document.getElementById("disp").innerHTML = ` <button style="margin-left: 390px;transform: translateY(-45px);width: 100px; " class="btn btn-outline-info p-2 " onclick="transConfirmation()" id="continuBtn">Continue</button>`
+                document.getElementById("sendersPurpose").innerText = `Purpose :  ${remarksBox.value}.`
+                beneficairyAccNumber.style.borderColor = ""
+                amountTransfer.style.borderColor = ""
+                accountToDebit.style.borderColor = ""
+                remarksBox.style.borderColor = ""
+            }
+        } else if (!deduct) {
+            beneficairyAccNumber.style.borderColor = "red"
+            document.getElementById("continueBtn").disabled = true;
+            document.getElementById("textWarning").innerText = "Bad request :: Reciever's Account Number is Invalid!."
+
+        }
+    })
+    document.getElementById("sendersAcctNumber").addEventListener("click", function() {
+        document.getElementById("great").disabled = false
+        sendersAcctNumber.style.borderColor = ""
+        sendersPassWord.style.borderColor = ""
+        document.getElementById("great").style.backgroundColor = ""
+        document.getElementById("sendersPurpose").innerText = ""
+    })
+    document.getElementById("sendersPassWord").addEventListener("click", function() {
+        document.getElementById("great").disabled = false
+        sendersAcctNumber.style.borderColor = ""
+        sendersPassWord.style.borderColor = ""
+        document.getElementById("great").style.backgroundColor = ""
+        document.getElementById("sendersPurpose").innerText = ""
+    })
+
+    function checkInput() {
+        var star = JSON.parse(localStorage.getItem("richard"))
+        var sun = star[0].passWord
+        var food = star[0].acctNumber
+        console.log(star)
+        var moon = JSON.parse(localStorage.getItem("allItems"))
+
+        var sendAcN = sendersAcctNumber.value;
+        var sendPass = sendersPassWord.value;
+        if (sendAcN == "" && sendPass == "") {
+            document.getElementById("sendersPurpose").innerText = "Fill out the required field!"
+            document.getElementById("great").disabled = true;
+            sendersAcctNumber.style.borderColor = "red"
+            sendersPassWord.style.borderColor = "red"
+            document.getElementById("great").style.backgroundColor = "red"
+        } else if (sendAcN !== food || sendPass !== sun) {
+            document.getElementById("sendersPurpose").innerText = "Bad Request:Wrong password or account number!"
+            document.getElementById("great").disabled = true;
+            sendersAcctNumber.style.borderColor = "red"
+            sendersPassWord.style.borderColor = "red"
+            document.getElementById("great").style.backgroundColor = "red"
+        } else {
+            document.getElementById("sendersPurpose").innerText = ""
+            document.getElementById("great").disabled = false;
+            sendersAcctNumber.style.borderColor = ""
+            sendersPassWord.style.borderColor = ""
+            document.getElementById("mighty").innerHTML = `<button onclick="done() "class="btn btn-success p-2 " style="width: 100px;transform: translateY(50px);" id=" ">Done</button>`
+
+        }
+    }
+
+    function done() {
+        var star = JSON.parse(localStorage.getItem("richard"))
+        var moon = JSON.parse(localStorage.getItem("allItems"))
+        var sendAcN = sendersAcctNumber.value;
+        var google = moon.find(free => (free.acctNumber == check[0].accountNumber))
+        var good2 = moon.find(free => (free.acctNumber == sendAcN))
+        var some = parseInt(google.userBalance) + parseInt(check[0].amount)
+        var goal = parseInt(good2.userBalance) - parseInt(check[0].amount)
+
+        for (d = 0; d < moon.length;) {
+            if (moon[d].acctNumber == sendAcN) {
+                moon[d].userBalance = goal
+
+                break
+            }
+            d++
+        }
+        for (d = 0; d < star.length;) {
+            if (star[d].acctNumber == sendAcN) {
+                star[d].userBalance = goal
+
+                break
+            }
+            d++
+        }
+        for (d = 0; d < moon.length;) {
+            if (moon[d].acctNumber == check[0].accountNumber) {
+                moon[d].userBalance = some
+                break
+            }
+            d++
+        }
+        localStorage.setItem("allItems", JSON.stringify(moon))
+        localStorage.setItem("richard", JSON.stringify(star))
+
+        if (confirm("Transaction successful") == true) {
+            window.location.href = ("../Dashboard/Dashboard.html");
+        }
+    }
+</script>
+<script src="./Dashboard.js "></script>

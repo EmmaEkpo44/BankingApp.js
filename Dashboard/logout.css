@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.welcome {
+    margin-left: 500px;
+    font-weight: 800;
+    color: orangered;
+    font-size: 40px;
+    transform: translateY(-150px);
+}
+
+#sideNav {
+    height: 735px;
+    width: 27%;
+    margin-left: -100px;
+    color: orangered;
+    background: linear-gradient(rgb(17, 17, 65), black);
+    margin-top: -10px;
+    padding: 50px;
+}
+
+#dashBox {
+    height: 670px;
+    margin-top: -670px;
+    margin-left: 438px;
+    padding-left: 170px;
+}
+
+#box {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#box:hover {
+    color: white;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+#bD:hover {
+    background-color: orangered;
+}
+
+#dashboard {
+    height: 200px;
+    border: 1px solid red;
+    margin-top: -620px;
+    margin-left: 310px;
+    padding: 50px;
+}

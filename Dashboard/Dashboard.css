@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#sideNav {
+    height: 590px;
+    width: 29%;
+    margin-left: -100px;
+    color: orangered;
+    background: linear-gradient(rgb(19, 19, 69), black);
+    margin-top: -10px;
+    padding: 50px;
+    animation-name: showThem;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+@keyframes showThem {
+    from {
+        transform: translateX(-500px);
+    }
+}
+
+.container-main {
+    width: 79%;
+    margin-top: -580px;
+    transform: translateX(265px);
+    padding: 60px;
+    background-color: whitesmoke;
+    height: 580px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+
+#dashBox {
+    height: 670px;
+    margin-top: -670px;
+    margin-left: 438px;
+    padding-left: 170px;
+}
+
+#box {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#box:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#bD:hover {
+    background-color: orangered;
+    border-radius: 0px 20px 20px 0px;
+    transform: scale(1.7);
+}
+
+#dashboard {
+    height: 200px;
+    margin-top: -620px;
+    margin-left: 310px;
+    padding: 50px;
+}
+
+#links {
+    text-decoration: none;
+    color: rgb(224, 66, 8);
+    font-weight: 600;
+}
+
+#links:active {
+    color: black;
+    text-decoration: underline;
+}
+
+#voilet {
+    width: 350px;
+    margin-left: 595px;
+    height: 200px;
+    transform: translateY(-150px);
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgb(55, 60, 60);
+    animation-name: showus;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+@keyframes showus {
+    from {
+        transform: translateX(500px);
+    }
+}
+
+#indigo {
+    height: 70px;
+    width: 380px;
+    padding: 30px;
+    margin-left: 570px;
+    display: flex;
+    transform: translateY(-58px);
+    border-radius: 0px 0px 0px 7px;
+    background-color: white;
+    animation-name: showus;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+@keyframes showus {
+    from {
+        transform: translateX(500px);
+    }
+}
+
+#purple {
+    height: 50px;
+    width: 50px;
+    margin-top: -125px;
+    padding: 30px;
+    border-radius: 100%;
+    background-color: rgb(232, 83, 29);
+    transform: translateX(870px);
+    animation-name: showus;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+@keyframes showus {
+    from {
+        transform: translateX(500px);
+    }
+}

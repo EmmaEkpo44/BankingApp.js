@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./airtimetopup2.css">
+</head>
+
+<body onload="showAccNumber()" id="preventTabBtnHere">
+
+    <div class="Sidenav shadow-lg" id="sideNav">
+        <div style="margin-left: 51px;transform: translateY(-40px);padding: 35px;height: 30px;border: 5px solid rgb(224, 66, 8);width: 265px;">
+            <div style="border: 3px solid rgb(224, 66, 8);height: 40px;width: 40px;margin-top: -20px;padding: 20px;margin-left: -30px;border-radius: 100%;">
+                <img src="/images/avataricon-removebg-preview.png" alt="Avatar" class="avatar" style="height:30px;margin-top: -30px;margin-left: -13px;">
+                <p style="margin-top: -35px;margin-left: 37px;font-size: 12px;font-weight: 700;">AccountNumber:
+                    <p style="transform: translateY(-33px);margin-left: 140px;font-weight: 500;color:white;font-size: 12px;" id="accNumberDispTop"></p>
+                </p>
+            </div>
+        </div>
+
+        <div style="width: 111.3%;margin-left: 20px;transform: translateY(-25px);height: 400px;">
+            <a href="./Dashboard.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px);" id="bD">
+                    <img src="/images/icons8-dashboard-layout-24.png" alt="" style="transform: translateX(15px);margin-top: -7px;">
+                    <span style="margin-left:50px;">DashBoard</span>
+                </div>
+            </a>
+            <a href="./transfer.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px);" id="bD">
+                    <img src="/images/icons8-money-transfer-26.png" alt="" style="transform: translateX(15px);margin-top: -7px;">
+                    <span style="margin-left:50px;">Transfers</span>
+                </div>
+            </a>
+            <a href="./airtimetop-up2.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="aq">
+                    <img src="/images/icons8-topup-payment-50.png" alt="" style="transform: translateX(10px);margin-top: -7px;height: 30px;">
+                    <span style="margin-left:30px; ">Airtime/Data Topup</span>
+                </div>
+            </a>
+            <a href="./accountHistory.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="bD">
+                    <img src="/images/icons8-order-history-64.png" alt="" style="transform: translateX(15px);margin-top: -7px;height: 35px;">
+                    <span style="margin-left:40px;">Account-History</span>
+                </div>
+            </a>
+            <a href="./deposits.html" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="bD">
+                    <img src="/images/icons8-mts-money-50.png" alt="" style="transform: translateX(15px);margin-top: -7px;height: 40px;">
+                    <span style="margin-left:38px;">Deposits</span>
+                </div>
+            </a>
+
+            <a onclick="logUserOut()" id="box">
+                <div style="padding: 20px;margin-top: 10px;transform: translateY(-10px); " id="bD">
+                    <img src="/images/icons8-logout-rounded-down-50.png" alt="" style="transform: translateX(10px);margin-top: -7px;height: 30px;">
+                    <span style="margin-left: 50px;">Log-Out</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div style="height: 580px;width: 78.9%;margin-top: -580px;transform: translateX(266px);;padding: 50px;background-color:whitesmoke;display:block; " id="wholeDisplay">
+        <img src="/images/Emma's bank Logo.png" alt="" height="50px" style="margin-top: -30px;transform: translateX(850px);">
+        <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:30px;font-weight: 700;color: rgb(224, 66, 8);transform: translateY(-50px); ">Airtime/Data Top-up</p>
+        <p style="font-style: oblique;font-weight: 100;transform: translateY(-70px); ">Topup your airtime/data bundle.</p>
+        <div style="display: flex;margin-top: -20px; ">
+            <a style="text-decoration: none;color:rgb(224, 66, 8) ; ">
+                <div class="card p-5 shadow-lg " style="width:150px;height: 150px;cursor: pointer;border: 0px solid;margin-left: -20px; " id="air-a" onclick="mtnSection()">
+                    <img src="/images/1200px-MTN_Logo.svg.png " alt=" " height="100px ">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(5px);font-weight: 600; ">MTN Nigeria</p>
+                </div>
+            </a>
+            <a style="text-decoration: none;color:rgb(224, 66, 8) ;cursor: pointer " id="air-a">
+                <div class="card p-5 shadow-lg " style="width:150px;height: 150px;margin-left: 10px;border: 0px solid;" onclick="airtelSection()">
+                    <img src="/images/Airtel_logo_logotype_emblem.png " alt=" " height="100px ">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(5px);font-weight: 600; ">AIRTEL Nigeria</p>
+                </div>
+            </a>
+            <a style="text-decoration: none;color:rgb(224, 66, 8) ;cursor: pointer " id="air-a">
+                <div class="card p-5 shadow-lg " style="width:150px;height: 150px;margin-left: 10px;border: 0px solid;" onclick="NmobileSection()">
+                    <img src="/images/9mobile.png " alt=" " style="height: 200px;transform: translateY(30px); ">
+                    <p style="margin-left: -38px;font-size: 10px;transform: translateY(28px);font-weight: 600; ">9Mobile</p>
+                </div>
+            </a>
+            <a style="text-decoration: none;color:rgb(224, 66, 8) ;cursor: pointer " id="air-a">
+                <div class="card p-5 shadow-lg " style="width:150px;height: 150px;margin-left: 10px;border: 0px solid; " onclick="globacomSection()">
+                    <img src="/images/464-4648442_glo-offices-in-nigeria-hd-png-download.png " alt=" " height="100px ">
+                    <p style="margin-left: -35px;font-size: 10px;transform: translateY(5px);font-weight: 600; ">Globacom Nigeria</p>
+                </div>
+            </a>
+        </div>
+         <div style="width: 30%;height: 55%;transform: translateY(-200px);margin-left: 630px;padding: 50px;background-color: white; " class="shadow-lg ">
+            <p style=" text-align: center;transform: translateY(-35px);font-size: 12px;font-style: oblique; ">Frequent Airtime/Data Top-up</p>
+            <div style="height: 35px;padding: 25px;width: 268px;margin-left: -50px;transform: translateY(-50px);background-color: rgb(182, 181, 181); ">
+                <ul style="display: flex;list-style-type: none;transform: translateX(-100px); ">
+                    <a id="ab ">
+                        <li style="margin-left: 80px;margin-top: -15px;cursor: pointer;color: rgb(224, 66, 8); padding: 5px;font-size: small;" onclick="showAir()">AirtimeTopup</li>
+                        <div style="border: 1px solid red;height: 5px;width: 80px;transform:translateX(85px);background-color: red;display:none;" id="borderAir"></div>
+                    </a>
+                    <a id="ab ">
+                        <li style="transform: translateX(100px);margin-top: -15px;cursor: pointer; padding: 5px;color: rgb(224, 66, 8);font-size: small;" onclick="showData()">DataTopup</li>
+                        <div style="border: 1px solid red;height: 5px;width: 70px;transform:translateX(105px) ;background-color: red;display:none;" id="borderData"></div>
+                    </a>
+                </ul>
+            </div>
+            <div>
+                <p style="margin-left: -2px;display: none;font-size: 10px;" id="aT">No recent AirtimeTopup transactions</p>
+                <p style="margin-left: -2px;margin-top:5px;display: none;font-size: 10px;" id="dT">No recent Data Top-up transactions</p>
+            </div>
+        </div>
+        <a >
+            <div style="height: 50px;width: 50px;margin-top: -170px;padding: 30px;border-radius: 100%;background-color: rgb(232, 83, 29);transform: translateX(850px); ">
+                <img src="/images/icons8-chat-message-sent-50.png " alt=" " style="transform:translateY(-15px);margin-left:-15px;height: 30px; ">
+            </div>
+        </a> 
+    </div>
+    <div style="height: 580px;width: 78.9%;margin-top: -580px;transform: translateX(266px);;padding: 50px;background-color:whitesmoke;display:none;" id="mtnSect">
+        <p style="transform: translateY(-30px);margin-left: 40px;font-family: Arial, Helvetica, sans-serif;font-weight: 700;font-size: 25px;color: rgb(39, 36, 36);">MTN Airtime</p>
+        <p style="transform: translateY(-45px);margin-left: 40px;font-weight: 100;font-style: oblique;">Buy airtime and data at cheap rates</p>
+        <div onclick="cancelSection() " style="height:30px;padding: 25px;cursor: pointer;margin-left: 40px;display: flex;margin-top: -40px;transform: translateY(-15px);background-color:rgb(224, 66, 8);;width: 160px;border-color: rgb(224, 66, 8) ;border:
+        1px solid rgb(224, 66, 8) ; ">
+            <img src="/images/icons8-dashboard-layout-24.png " alt=" " height="30px " style="transform: translateY(-10px);margin-left: -20px; ">
+            <p style="transform: translateY(-10px);margin-left: 8px;font-size: 18px;font-weight: 600;color: white; ">Menu List</p>
+        </div>
+        <div style="width: 55%;margin-left: 40px;transform: translateY(-15px);height: 430px;padding: 50px;background-color: white;" class="shadow-sm ">
+            <p style="font-style: oblique;transform: translateY(-45px);font-weight: 600; ">Available Products</p>
+            <p style="margin-top: -67px;color: red;" id="dangerText">kindly fill out required field!.</p>
+            <p style="background-color:rgb(224, 66, 8) ;width: 150px;padding: 10px;color: white;transform: translateY(-5px);font-weight: 600;cursor: pointer;" onclick="airtimePart()" id="airtimeText">Airtime Top-up</p>
+            <p style="background-color:rgb(224, 66, 8) ;width: 130px;padding: 10px;color: white;transform: translateY(-65px);margin-left: 170px;font-weight: 600;cursor: pointer; " onclick="dataPart()" id="dataText">Data Top-up</p>
+
+            
+            <div style="transform: translateY(-70px);height: 300px;display: none; " id="airtimediv">
+                <p style="font-size: 13px;">Select account to debit</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="accountOfSender">
+                <p style="font-size: 13px;">Amount of airtime</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="amountOfAirtime">
+                <p style="font-size: 13px;">Select Phone Number</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="phoneNumberOfSender">
+                <p style="font-size: 13px;">Enter Your password to confirm transaction</p>
+                <input type="password" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="passwordOfSender">
+                <button class="btn btn-outline-primary " style="background-color:rgb(224, 66, 8) ;color: white;width: 100px;transform: translateY(-15px);margin-left: 300px;" onclick="confirmAirtimeTransaction()" id="airtimeDBtn">Done</button>
+            </div>
+            <div style="transform: translateY(-70px);height: 300px;display: none; " id="datadiv">
+                <p style="font-size: 13px; ">Select account to debit</p>
+                <input type="number " style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="accountOfSenderD">
+                <p style="font-size: 13px; ">Amount of data</p>
+                <input type="number " style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="amountOfData">
+                <p style="font-size: 13px; ">Select Phone Number</p>
+                <input type="number " style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="phoneNumberOfSenderD">
+                <p style="font-size: 13px; ">Enter Your password to confirm transaction</p>
+                <input type="password" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="passwordOfSenderD">
+                <button class="btn btn-outline-primary " style="background-color:rgb(224, 66, 8) ;color: white;width: 100px;transform: translateY(-15px);margin-left: 300px;" onclick="confirmDataTransaction()" id="dataDoneBtn">Done</button>
+            </div>
+        </div>
+        <a>
+            <div style="height: 50px;width: 50px;margin-top: -200px;padding: 30px;border-radius: 100%;background-color: rgb(232, 83, 29);transform: translateX(800px);">
+                <img src="/images/icons8-chat-message-sent-50.png " alt=" " style="transform:translateY(-15px);margin-left:-15px;height: 30px;">
+            </div>
+        </a>
+    </div>
+    <div style="height: 580px;width: 78.9%;margin-top: -580px;transform: translateX(266px);;padding: 50px;background-color:whitesmoke;display:none;" id="airtelSect">
+        <p style="transform: translateY(-30px);margin-left: 40px;font-family: Arial, Helvetica, sans-serif;font-weight: 700;font-size: 25px;color: rgb(39, 36, 36);">Airtel Nigeria</p>
+        <p style="transform: translateY(-45px);margin-left: 40px;font-weight: 100;font-style: oblique;">Buy airtime and data at cheap rates</p>
+        <div onclick="cancelSection() " style="height:30px;padding: 25px;cursor: pointer;margin-left: 40px;display: flex;margin-top: -40px;transform: translateY(-15px);background-color:rgb(224, 66, 8);;width: 160px;border-color: rgb(224, 66, 8) ;border:
+        1px solid rgb(224, 66, 8) ; ">
+            <img src="/images/icons8-dashboard-layout-24.png " alt=" " height="30px " style="transform: translateY(-10px);margin-left: -20px; ">
+            <p style="transform: translateY(-10px);margin-left: 8px;font-size: 18px;font-weight: 600;color: white; ">Menu List</p>
+        </div>
+        <div style="width: 54%;margin-left: 40px;transform: translateY(-15px);height: 430px;padding: 50px;background-color: white; " class="shadow-sm">
+            <p style="font-style: oblique;transform: translateY(-45px);font-weight: 600; ">Available Products</p>
+            <p style="margin-top: -67px;color: red;" id="dangerTextAir">kindly fill out the required field!.</p>
+            <p style="background-color:rgb(224, 66, 8) ;width: 150px;padding: 10px;color: white;transform: translateY(-5px);font-weight: 600;cursor: pointer; " onclick="airtimePart()" id="airtimeAirtelText">Airtime Top-up</p>
+            <p style="background-color:rgb(224, 66, 8) ;width: 130px;padding: 10px;color: white;transform: translateY(-65px);margin-left: 170px;font-weight: 600;cursor: pointer; " onclick="dataPart()" id="dataAirtelText">Data Top-up</p>
+            <div style="transform: translateY(-70px);height: 300px;display: none; " id="airtimeAirteldiv">
+                <p style="font-size: 13px; ">Select account to debit</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px);" id="accountOfSenderAir">
+                <p style="font-size: 13px; ">Amount of airtime</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px);" id="amountOfAirtimeAir">
+                <p style="font-size: 13px; ">Select Phone Number</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px);" id="phoneNumberOfSenderAir">
+                <p style="font-size: 13px; ">Enter Your password to confirm transaction</p>
+                <input type="password" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px);" id="passwordOfSenderAir">
+                <button class="btn btn-outline-primary " style="background-color:rgb(224, 66, 8) ;color: white;width: 100px;transform: translateY(-15px);margin-left:300px;" id="airtimeDBtnAir" onclick="confirmAirtimeTransactionAir()">Done</button>
+            </div>
+            <div style="transform: translateY(-70px);height: 300px;display: none; " id="dataAirteldiv">
+                <p style="font-size: 13px; ">Select account to debit</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="accountOfSenderDAir">
+                <p style="font-size: 13px; ">Amount of data</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="amountOfDataDAir">
+                <p style="font-size: 13px; ">Select Phone Number</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="phoneNumberOfSenderDAir">
+                <p style="font-size: 13px; ">Enter Your password to confirm transaction</p>
+                <input type="password" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="passwordOfSenderDAir">
+                <button class="btn btn-outline-primary " style="background-color:rgb(224, 66, 8) ;color: white;width: 100px;transform: translateY(-15px);margin-left: 300px;" onclick="confirmDataTransactionAir()" id="dataDoneBtnAir">Done</button>
+            </div>
+        </div>
+        <a >
+            <div style="height: 50px;width: 50px;margin-top: -200px;padding: 30px;border-radius: 100%;background-color: rgb(232, 83, 29);transform: translateX(800px);">
+                <img src="/images/icons8-chat-message-sent-50.png " alt=" " style="transform:translateY(-15px);margin-left:-15px;height:30px; ">
+            </div>
+        </a>
+    </div>
+    <div style="height: 580px;width: 78.9%;margin-top: -580px;transform: translateX(266px);;padding: 50px;background-color:whitesmoke;display:none;" id="NmobileSect">
+        <p style="transform: translateY(-30px);margin-left: 40px;font-family: Arial, Helvetica, sans-serif;font-weight: 700;font-size: 25px;color: rgb(39, 36, 36);">9Mobile</p>
+        <p style="transform: translateY(-60px);margin-left: 40px;font-weight: 100;font-style: oblique;">Buy airtime and data at cheap rates</p>
+        <div onclick="cancelSection() " style="height: 30px;padding: 25px;cursor: pointer;margin-left: 40px;display: flex;margin-top: -50px;transform: translateY(-20px);background-color:rgb(224, 66, 8);;width: 160px;border-color: rgb(224, 66, 8) ;border:
+        1px solid rgb(224, 66, 8) ; ">
+            <img src="/images/icons8-dashboard-layout-24.png " alt=" " height="30px " style="transform: translateY(-10px);margin-left: -20px; ">
+            <p style="transform: translateY(-10px);margin-left: 8px;font-size: 18px;font-weight: 600;color: white; ">Menu List</p>
+        </div>
+        <div style="width: 54%;margin-left: 40px;transform: translateY(-25px);height: 450px;padding: 50px;background-color: white; " class="shadow-sm">
+            <p style="font-style: oblique;transform: translateY(-45px);font-weight: 600; ">Available Products</p>
+            <p style="margin-top: -60px;color: red; " id="dangerTextNM">Kindly fill out the required field!.</p>
+            <p style="background-color:rgb(224, 66, 8) ;width: 150px;padding: 10px;color: white;transform: translateY(-5px);font-weight: 600;cursor: pointer;" onclick="airtimePart()" id="airtime9mobileText">Airtime Top-up</p>
+            <p style="background-color:rgb(224, 66, 8) ;width: 130px;padding: 10px;color: white;transform: translateY(-65px);margin-left: 170px;font-weight: 600;cursor: pointer; " onclick="dataPart()" id="data9mobileText">Data Top-up</p>
+            <div style="transform: translateY(-70px);height: 300px;display: none; " id="airtime9mobilediv">
+                <p style="font-size: 13px; ">Select account to debit</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="accountOfSenderNM">
+                <p style="font-size: 13px; ">Amount of airtime</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="amountOfAirtimeNM">
+                <p style="font-size: 13px; ">Select Phone Number</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="phoneNumberOfSenderNM">
+                <p style="font-size: 13px; ">Enter Your password to confirm transaction</p>
+                <input type="password" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="passwordOfSenderNM">
+                <button class="btn btn-outline-primary " style="background-color:rgb(224, 66, 8) ;color: white;width: 100px;transform: translateY(-15px);margin-left: 300px; " onclick="confirmAirtimeTransactionNM()" id="airtimeBtnNM">Done</button>
+            </div>
+            <div style="transform: translateY(-70px);height: 300px;display: none; " id="data9mobilediv">
+                <p style="font-size: 13px; ">Select account to debit</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="accountOfSenderDNM">
+                <p style="font-size: 13px; ">Amount of data</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="amountOfDataNM">
+                <p style="font-size: 13px; ">Select Phone Number</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="phoneNumberOfSenderDNM">
+                <p style="font-size: 13px; ">Enter Your password to confirm transaction</p>
+                <input type="password" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="passwordOfSenderDataNM">
+                <button class="btn btn-outline-primary" style="background-color:rgb(224, 66, 8) ;color: white;width: 100px;transform: translateY(-15px);margin-left: 300px; " onclick="confirmDataTransactionNM()" id="dataBtnNM">Done</button>
+            </div>
+
+        </div>
+        <a>
+            <div style="height: 50px;width: 50px;margin-top: -200px;padding: 30px;border-radius: 100%;background-color: rgb(232, 83, 29);transform: translateX(800px); ">
+                <img src="/images/icons8-chat-message-sent-50.png " alt=" " style="transform:translateY(-15px);margin-left:-15px;height: 30px;">
+            </div>
+        </a>
+    </div>
+    <div style="height: 580px;width: 78.9%;margin-top: -580px;transform: translateX(266px);;padding: 50px;background-color:whitesmoke;display:none;" id="globacomSect">
+        <p style="transform: translateY(-30px);margin-left: 40px;font-family: Arial, Helvetica, sans-serif;font-weight: 700;font-size: 25px;color: rgb(39, 36, 36);">Globacom Nigeria</p>
+        <p style="transform: translateY(-60px);margin-left: 40px;font-weight: 100;font-style: oblique;">Buy airtime and data at cheap rates</p>
+        <div onclick="cancelSection()" style="height: 30px;padding: 25px;cursor: pointer;margin-left: 40px;display: flex;margin-top: -50px;transform: translateY(-20px);background-color:rgb(224, 66, 8);;width: 160px;border-color: rgb(224, 66, 8) ;border:
+        1px solid rgb(224, 66, 8) ; ">
+            <img src="/images/icons8-dashboard-layout-24.png " alt=" " height="30px " style="transform: translateY(-10px);margin-left: -20px; ">
+            <p style="transform: translateY(-10px);margin-left: 8px;font-size: 18px;font-weight: 600;color: white; ">Menu List</p>
+        </div>
+        <div style="width: 54%;margin-left: 40px;transform: translateY(-20px);height: 450px;padding: 50px;background-color: white; " class="shadow-sm ">
+            <p style="font-style: oblique;transform: translateY(-50px);font-weight: 600; ">Available Products</p>
+            <p style="margin-top: -60px;color: red; " id="dangerTextglo">Kindly fill out the required filed!.</p>
+            <p style="background-color:rgb(224, 66, 8) ;width: 150px;padding: 10px;color: white;transform: translateY(-5px);font-weight: 600;cursor: pointer; " onclick="airtimePart()" id="airtimeGloText">Airtime Top-up</p>
+            <p style="background-color:rgb(224, 66, 8) ;width: 130px;padding: 10px;color: white;transform: translateY(-65px);margin-left: 170px;font-weight: 600;cursor: pointer; " onclick="dataPart()" id="dataGloText">Data Top-up</p>
+            <div style="transform: translateY(-70px);height: 300px;display: none; " id="airtimeGlodiv">
+                <p style="font-size: 13px; ">Select account to debit</p>
+                <input type="number" style="padding: 5px;width: 400px;transform: translateY(-18px);border-top:none;border-left: none;border-right: none; " id="accountOfSenderglo">
+                <p style="font-size: 13px; ">Amount of airtime</p>
+                <input type="number" style="padding: 5px;width: 400px;transform: translateY(-18px);border-top:none;border-left: none;border-right: none; " id="amountOfAirtimeglo">
+                <p style="font-size: 13px; ">Select Phone Number</p>
+                <input type="number" style="padding: 5px;width: 400px;transform: translateY(-18px);border-top:none;border-left: none;border-right: none; " id="phoneNumberOfSenderglo">
+                <p style=" font-size: 13px; ">Enter Your password to confirm transaction</p>
+                <input type="password" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="passwordOfSenderglo">
+                <button class="btn btn-outline-primary" style="background-color:rgb(224, 66, 8) ;color: white;width: 100px;transform: translateY(-15px);margin-left: 300px; " onclick="confirmAirtimeTransactionglo()" id="airtimeDoneBtnglo">Done</button>
+            </div>
+            <div style="transform: translateY(-70px);height: 300px;display: none; " id="dataGlodiv">
+                <p style="font-size: 13px; ">Select account to debit</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="accountOfSenderDataglo">
+                <p style="font-size: 13px; ">Amount of data</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="amountOfDataglo">
+                <p style="font-size: 13px; ">Select Phone Number</p>
+                <input type="number" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="phoneNumberOfSenderDataglo">
+                <p style="font-size: 13px; ">Enter Your password to confirm transaction</p>
+                <input type="password" style="padding: 5px;width: 400px;border-top:none;border-left: none;border-right: none;transform: translateY(-18px); " id="passwordOfSenderDataglo">
+                <button class="btn btn-outline-primary " style="background-color:rgb(224, 66, 8) ;color: white;width: 100px;transform: translateY(-10px);margin-left: 300px;" onclick="confirmDataTransactionglo()" id="dataDoneBtnglo">Done</button>
+            </div>
+        </div>
+        <a>
+            <div style="height: 50px;width: 50px;margin-top: -200px;padding: 30px;border-radius: 100%;background-color: rgb(232, 83, 29);transform: translateX(800px); ">
+                <img src="/images/icons8-chat-message-sent-50.png " alt=" " style="transform:translateY(-15px);margin-left:-15px;height: 30px;">
+            </div>
+        </a>
+    
+    </div>
+    <script src="airtimetopup.js"></script>
+    <script src="Dashboard.js "></script>
+</html>
+</body>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./Signup.css">
+
+
+
+</head>
+
+<body>
+    <div id="errorMsg"></div>
+    <section class="mother-container">
+        <div class="container" id="background-pics">
+                
+            <img src="/images/icons8-bank-building-50.png" alt=""  style="transform:translateY(10px);margin-left: 50px; margin-top: 50px;height: 50px;">
+            <div>
+                <h1 style="transform: translateY(50px);margin-left: 250px;font-size: 30px;color: rgb(11, 30, 70);font-weight: 700;">A Financial Manager.</h1>
+
+            </div>
+            <div style="transform: translateY(60px);margin-left: 350px;"><br>
+                <h3 style="color:rgb(11, 30, 70); font-size: 35px;font-weight: 700;">We Value
+                    <br>Your Experience <br> Here
+                </h3>
+            </div>
+            <div style="transform: translateY(60px);margin-left: 230px;" class="container">
+                <p style="font-size: 35px;font-weight: 700;color:rgb(11, 30, 70) ;">Save,
+                    <br>Invest & <br>Re-construct Your Finance.
+                </p>
+            </div>
+            <div style="background-image: url(/images/icons8-bank-building-50.png);height: 50px;background-repeat: no-repeat;margin-left: 880px;transform: translateY(-200px);"></div>
+            <div style="background-image: url(/images/icons8-mastercard-logo-50.png);height: 50px;background-repeat: no-repeat;margin-left: 650px;transform: translateY(-100px);"></div>
+            <div style="background-image: url(/images/icons8-bank-euro-50.png);height: 50px;background-repeat: no-repeat;margin-left: 80px;transform: translateY(-200px);"></div>
+            <div style="background-image: url(/images/icons8-card-verification-value-50.png);height: 50px;background-repeat: no-repeat;margin-left: 800px;transform: translateY(-50px);"></div>
+            <div style="background-image: url(/images/icons8-bank-cards-50.png);height: 50px;background-repeat: no-repeat;margin-left: 400px;transform: translateY(-105px);"></div>
+        </div>
+        <div id="sub-container">
+            <p id="disp" style="color:red;margin-left: 80px;margin-top: -45px;font-size: 15px;transform: translateX(-65px);"></p>
+            <img src="/images/Emma's bank Logo.png" alt="" height="50px" style="margin-top: -10px;transform: translateX(280px);;">
+            <p style="color: white;margin-top: -30px;margin-left: 80px;font-size: 30px;font-weight: 700;transform: translateY(20px);"> Sign-up</p>
+            <p style="color: white;margin-left: 20px;">
+                <b>Already Have An Account?</b>
+                <a href="/Login/Login.html" style="text-decoration: none;">
+                    <b><span  id="Terms">Login</span></b>
+                </a>
+            </p>
+            <div class="input-container">
+                <input type="text " class="form-control w-100" style="background-color: transparent;margin-left: 20px;margin-top: 30px;padding: 30px;color: white;" placeholder="Enter Full Name" required id="fName" name="name">
+                <input type="email" class="form-control w-100 " style="background-color: transparent;margin-left: 20px;margin-top: 10px;padding: 30px;color: white; " placeholder=" Valid Email@gmail.com" required id="e" name="email">
+                <input type="number" class="form-control w-100 " style="background-color: transparent;margin-left: 20px;margin-top: 10px;padding: 30px;color: white; " placeholder="Enter Phone Number" required id="pN">
+                <input type="password" class="form-control w-100 " style="background-color: transparent;margin-left: 20px;margin-top: 10px;padding: 30px;color: white; " placeholder="Set Password" required id="pWd">
+                <p style="color: red;transform: translateY(-45px);margin-left: 220px;">Show Password</p>
+                <input type="checkbox" onclick="showPassWord()" style="margin-left: 380px;cursor: pointer;transform: translate(-40px,-83px);">
+                <h5 style="color: red;margin-left: -30px;transform:translateY(-86px)"><strong id="passWordShown"></strong></h5><br><br>
+                <input type="hidden" class="form-control w-100" id="acc">
+
+                <div>
+                    <button class="btn btn-outline-success p-3 w-75 " style="margin-left: 70px;margin-top: -120px;transform: translateY(-30px); " onclick="registerUsers()" type="button" id="registerBtn">Register</button>
+                </div>
+                <div style="display: flex;margin-top: -20px;margin-left: 150px;transform: translateY(-20px); ">
+                    <a href="../index.html" style="text-decoration: none;cursor: pointer; ">
+                        <p style="margin-left:-100px;transform: translateY(-20px);" id="Terms">Home</p>
+                    </a>
+
+                    <a  style="text-decoration: none;cursor: pointer; ">
+                        <p style="margin-left:-10px;transform: translateY(-20px);" id="Terms">Terms/Conditions</p>
+                    </a>
+                    <a onclick="goToAdmin()" style="text-decoration: none; cursor: pointer;">
+                        <p style="margin-left: 50px;transform: translateY(-20px); " id="Terms2">Admin</p>
+                    </a>
+
+                </div>
+                <div style="background-color: white;width: 30px;transform: translateY(-425px);margin-left: 10px; "><img src="/images/icons8-name-30.png " alt=" "></div>
+                <div style="background-color: white;width: 30px;transform: translateY(-380px);margin-left: 10px; "><img src="/images/icons8-name-30.png " alt=" "></div>
+                <div style="background-color: white;width: 30px;transform: translateY(-340px);margin-left: 10px; "><img src="/images/icons8-name-30.png " alt=" "></div>
+                <div style="background-color: white;width: 30px;transform: translateY(-300px);margin-left: 10px; "><img src="/images/icons8-password-24.png " alt=" "></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+<script>
+    generate = () => {
+        var gn = "2002" + Math.floor(Math.random() * 1000000)
+        acc.value = gn;
+    }
+    generate()
+</script>
+<script src="./Signup.js"></script>

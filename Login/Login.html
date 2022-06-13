@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./Login.css">
+    <script src="./Login.js"></script>
+</head>
+
+<body>
+    <section class="mother-container">
+        <div class="container" id="background-pics">
+            <img src="/images/icons8-bank-building-50.png" alt="" height="60px" style="transform: translateY(10px);margin-left: 70px;margin-top: 50px;">
+            <div>
+                <h1 style="transform: translateY(60px);margin-left: 225px;font-size: 30px;color: rgb(11, 30, 70);font-weight: 700;">A Financial Manager.</h1>
+            </div>
+            <div style="transform: translateY(60px);margin-left: 300px;"><br>
+                <h3 style="color:rgb(11, 30, 70); font-size: 40px;font-weight: 700;">We Value
+                    <br>Your Experience <br> Here
+                </h3>
+            </div>
+            <div style="transform: translateY(60px);margin-left: 220px;" class="container">
+                <p style="font-size: 30px;font-weight: 700;color:rgb(11, 30, 70);">Save,
+                    <br>Invest & <br>Re-construct Your Finance.
+                </p>
+            </div>
+            <div style="background-image: url(/images/icons8-bank-building-50.png);height: 50px;background-repeat: no-repeat;margin-left: 880px;transform: translateY(-200px);"></div>
+            <div style="background-image: url(/images/icons8-bank-cards-50.png);height: 50px;background-repeat: no-repeat;margin-left: 470px;transform: translateY(-38px);"></div>
+            <div style="background-image: url(/images/icons8-bank-euro-50.png);height: 50px;background-repeat: no-repeat;margin-left: 80px;transform: translateY(-40px);"></div>
+            <div style="background-image: url(/images/icons8-mastercard-logo-50.png);height: 50px;background-repeat: no-repeat;margin-left: 800px;transform: translateY(-50px);"></div>
+            <div style="background-image: url(/images/icons8-chase-bank-24.png);height: 50px;background-repeat: no-repeat;margin-left: 400px;transform: translateY(-630px);"></div>
+        </div>
+        <div id="sub-container">
+            <strong><p id="display" style="color:red;margin-left: -20px;margin-top: -40px;font-size: 12px;transform: translateX(10px);"></p></strong>
+            <div style="position: fixed;">
+                <img src="/images/Emma's bank Logo.png" alt="" height="50px" style="margin-top: -10px;transform: translateX(280px);">
+            </div>
+
+            <p style="color: white;margin-top: 100px;margin-left: 100px;font-size: 30px;font-weight: 700;">Login</p>
+            <p style="color: white;margin-left: 30px;transform: translateY(-10px);">
+                <b>Don't Have An Account?</b>
+                <a href="/Signup/Signup.html" style="text-decoration: none ;">
+                    <b><span  id="Terms">Sign-up</span></b>
+                </a>
+            </p>
+            <div class="input-container">
+                <input type="email" class="form-control w-100" style="background-color: transparent;margin-left: 20px;margin-top: 10px;padding: 30px;color: white; " placeholder="Enter Your Registered Email" id="userEmail" name="email">
+                <input type="password" class="form-control w-100 " style="background-color: transparent;margin-left: 20px;margin-top: 10px;padding: 30px;color: white; " placeholder="Enter Your Password" id="userPassWord" minlength="8"><br><br>
+                <button class="btn btn-outline-success p-3 w-75 " style="margin-left: 70px; " onclick="loginUsers()" id="loginBtn">Login</button>
+                <p style="color: red;transform: translateY(-150px);margin-left: 230px;">Show Password</p>
+                <input type="checkbox" onclick="showPassWord()" style="transform: translateY(-190px);margin-left: 340px;cursor: pointer;">
+                <div>
+                </div>
+                <div style="display: flex;margin-top: 30px;margin-left: 150px; ">
+                    <a href="/index.html" style="text-decoration: none;cursor: pointer; ">
+                        <p style="margin-left:-100px;transform: translateY(-80px);" id="Terms">Home</p>
+                    </a>
+                    <a href=" " style="text-decoration: none;cursor: pointer; ">
+                        <p style="margin-left:-30px;transform: translateY(-80px); " id="Terms">Terms/Conditions</p>
+                    </a>
+                    <a onclick="goToAdmin()" style=" text-decoration: none;cursor: pointer; ">
+                        <p style="margin-left: 50px;transform: translateY(-80px) " id="Terms">Admin</p>
+                    </a>
+                </div>
+                <div style="background-color: white;width: 30px;transform: translateY(-355px);margin-left: 10px; "><img src="/images/icons8-name-30.png" alt=" "></div>
+                <div style="background-color: white;width: 30px;transform: translateY(-315px);margin-left: 10px; "><img src="/images/icons8-password-24.png" alt=" "></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

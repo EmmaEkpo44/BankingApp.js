@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mother-container {
+    height: 577px;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* animation-name: showMe;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal; */
+}
+
+#background-pics {
+    height: 577px;
+    margin-left: -20px;
+    background-image: url(/images/bank-background-image\ 5.jpg);
+    background-size: cover;
+    animation-name: showMe;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+@keyframes showMe {
+    from {
+        transform: translateX(-500px);
+    }
+}
+
+#sub-container {
+    height: 577px;
+    background-image: url(/images/Bank-background-image-14.jpg);
+    width: 35%;
+    padding: 50px;
+    animation-name: showThem;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+input{
+    outline: 0;
+    border-bottom: 1px solid black;
+}
+@keyframes showThem {
+    from {
+        transform: translateX(500px);
+    }
+}
+
+ ::placeholder {
+    margin-left: 100px;
+}
+
+#Terms {
+    color: orangered;
+}
+
+#Terms:hover {
+    color: white;
+}
+
+.input-container {
+    height: 577px;
+    margin-top: 10px;
+    /* margin-top: -20px; */
+    margin-left: -40px;
+    animation-name: showThem;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
